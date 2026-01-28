@@ -19,8 +19,6 @@ export class MessagesGateway {
     this.server.emit('message', message);
 
     return message;
-
-
   }
 
   @SubscribeMessage('findAllMessages')
