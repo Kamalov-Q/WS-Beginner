@@ -10,7 +10,7 @@ import { Server, Socket } from 'socket.io'
 })
 export class MessagesGateway {
   @WebSocketServer()
-  server: Server
+  server: Server 
   constructor(private readonly messagesService: MessagesService) { }
 
   @SubscribeMessage('createMessage')
