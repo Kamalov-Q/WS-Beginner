@@ -2,11 +2,11 @@ import { WebSocketGateway, SubscribeMessage, MessageBody, WebSocketServer, Conne
 import { MessagesService } from './messages.service';
 import { CreateMessageDto } from './dto/create-message.dto';
 import { Server, Socket } from 'socket.io'
-
+ 
 @WebSocketGateway({
   cors: {
     origin: '*'
-  }
+  } 
 })
 export class MessagesGateway {
   @WebSocketServer()
@@ -18,7 +18,7 @@ export class MessagesGateway {
     const message = await this.messagesService.create(createMessageDto, client?.id);
     this.server.emit('message', message);
 
-    return message;
+    return message; 
   }
 
   @SubscribeMessage('findAllMessages')
